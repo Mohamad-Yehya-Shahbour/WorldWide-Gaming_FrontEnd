@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* .MuiOutlinedInput-root{
+  height: 30px !important;
+} */
+
+.MuiButton-fullWidth{
+  max-width: 50% !important;
+  max-height: 20px !important;
+}
+
+
+#register-grid{
+  background: linear-gradient(120deg, #000000, #6108f0);
+  height: 110vh;
+}
+body{
+  background-color: #ebe9e9 !important;
+}
+.MuiDrawer-paper{
+  background-color: #4e206d !important ;
+}
+.MuiSvgIcon-root{
+  color: silver !important;
+}
+.MuiAutocomplete-inputRoot{
+  background-color: #d1cfcf ;
+}
+b{
+  color: rgb(161, 161, 161);
+}
+.MuiPaper-rounded{
+  background-color: rgb(255, 255, 255) !important;
+}
+#button-create, #create-event-button, #create-post-button, #add-friend-button{
+  background-color: #4e206d;
+}
+ #title{
+  color: #4e206d !important;
+}
+#like-icon, #like-icon-clips{
+  color: #4e206d !important;
+
+}
+#button-create-event{
+  background-color: #4e206d;
+  color: #ebe9e9;
+
+}
+#add-comment{
+  color: #4e206d !important;
+}
+#add-group-post{
+  color: #4e206d !important;
+}
+#title{
+  color: #650aa1 !important;
+}
+
+#group-input{
+  border-color: #8130b8;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #814fa1;
+  outline: 0 none;
+}
+.MuiTabPanel-root{
+  padding-left: 5px !important;
+}
+.css-1aquho2-MuiTabs-indicator{
+  background-color:#814fa1 !important ;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
+  color: #814fa1 !important;
+}
