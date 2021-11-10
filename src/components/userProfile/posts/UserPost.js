@@ -37,7 +37,7 @@ export default function UserPost(props) {
     <>
         <Card sx={{ maxWidth: 500}} >
         <CardHeader avatar={
-            <Avatar sx={{ bgcolor: "#4a148c" }} aria-label="recipe">
+            <Avatar src={`http://localhost:31058${props.userPost.user.imageUrl}`} sx={{ bgcolor: "#4a148c" }} aria-label="recipe">
               Y
             </Avatar> }
           title={props.userPost.user.userName}

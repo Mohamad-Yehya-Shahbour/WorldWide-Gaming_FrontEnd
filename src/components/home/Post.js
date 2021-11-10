@@ -32,10 +32,39 @@ const ExpandMore = styled((props) => {
 export default function Post(props) {
   const [expanded, setExpanded] = React.useState(false);
   const [comments, setComments] = useState([]);
+  const userId = localStorage.getItem("user_id");
   const postId = props.post.id;
   const likeId = "like-icon";
   const likedId = "likeIcon";
-  const [isLiked, setIsLiked] = useState(false)
+  const [isLiked, setIsLiked] = useState(false);
+  const [liked, setLiked]= useState("likes")
+  const [likes, setLikes] = useState(props.post.numberOfLikes);
+  
+  console.log(userId)
+  console.log(postId)
+  function inc (num){
+    let number = Number(num) + 1
+    return number;
+  }
+  if(isLiked == true){
+    setIsLiked(false)
+    const data = JSON.stringify({
+      postId: postId,
+      userId: userId
+    })
+    document.getElementById(`likes${postId}`).setAttribute("disabled", true);
+    api
+        .likePost(data)
+        .then((response)=>{
+          console.log(response.status)
+          if(response.status == 201){
+            setLikes(inc(likes))
+          }else{
+            setLikes(setLiked("already liked"))
+          }
+            console.log(response.data);
+        })
+  }
   useEffect(() => {
     api
     .getPostComments(postId)
@@ -67,10 +96,10 @@ export default function Post(props) {
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton  button onClick={(e)=>{e.preventDefault();setIsLiked(true)}} aria-label="add to favorites">
+          <IconButton id={`likes${props.post.id}`} button onClick={()=>{setIsLiked(true)}} aria-label="add to favorites">
             <FavoriteIcon id="like-icon" />
           </IconButton>
-          <span><b>{props.post.numberOfLikes} likes</b></span>
+          <span><b>{likes}  {liked}</b></span>
           <ExpandMore expand={expanded} onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more" >
             <ExpandMoreIcon />
           </ExpandMore>

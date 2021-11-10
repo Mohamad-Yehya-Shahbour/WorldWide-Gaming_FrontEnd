@@ -124,6 +124,11 @@ const api = {
     joinGroup: (data) =>
     axios.post(`${baseUrl}/Groups/joinGroup`, data ,head),
 
+    likePost: (data) =>
+    axios.post(`${baseUrl}/Posts/likePost`, data ,head),
+
+
+
 };
 
 export default api;

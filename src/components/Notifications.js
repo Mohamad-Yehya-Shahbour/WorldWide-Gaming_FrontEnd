@@ -5,6 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 import { useState, useEffect} from 'react'
 import api from '../services/api'
+import Divider from '@mui/material/Divider';
 
 export default function Notifications() {
   const [notifs, setNotifs] = useState([]);
@@ -41,7 +42,7 @@ export default function Notifications() {
       >
         Notifications <span className="ml-1 badge badge-pill badge-secondary">{notifs.length}</span>
       </Button>
-      <Menu
+      <Menu id="notif-list"
         id="fade-menu"
         MenuListProps={{
           'aria-labelledby': 'fade-button',
@@ -52,7 +53,10 @@ export default function Notifications() {
         TransitionComponent={Fade}
       >
         {notifs.map(notif=>(
+          <>
           <MenuItem key={`notif${notif.user1.id}`}  onClick={handleClose}>{notif.user1.userName} <br/> created an event</MenuItem>
+          <Divider style={{marginBottom:"0"}} />
+          </>
         ))}
         
         

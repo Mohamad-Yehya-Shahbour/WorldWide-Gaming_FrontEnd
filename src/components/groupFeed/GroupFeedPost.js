@@ -10,7 +10,7 @@ import Divider from '@mui/material/Divider';
 export default function GroupFeedPost(props) {
 
   return (
-    <Card style={{ minWidth: "80%",}} >
+    <Card sx={{ borderRadius: 6 }} style={{ minWidth: "80%",}} >
       <CardHeader
         avatar={
           <Avatar src={`http://localhost:31058${props.groupPost.user.imageUrl}`} sx={{ bgcolor: "#4a148c" }} aria-label="recipe">

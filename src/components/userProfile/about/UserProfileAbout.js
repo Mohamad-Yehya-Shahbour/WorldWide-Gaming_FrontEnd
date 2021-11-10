@@ -39,10 +39,10 @@ function UserProfileAbout(props) {
                     <>
                     <Row >
                         <Col sm={4}>
-                            <h4 style={{color:"gray"}}>{item.title}</h4>
+                            <h5 style={{color:"gray"}}>{item.title}</h5>
                         </Col>
                         <Col sm={8}>
-                            <h4>{item.Value}</h4>
+                            <h5>{item.Value}</h5>
                         </Col>
                     </Row>
                      <Divider sx={{width:"50%", marginLeft:"0", marginBottom:"20px"}} variant="middle"/>

@@ -8,7 +8,15 @@ import api from "../../../services/api";
 
 function Map() {
   const [event, setEvent] = useState(null);
+  const [eventId, setEventId] = useState(null)
   const [events, setEvents] = useState([]);
+  const userId = localStorage.getItem("user_id");
+  const [join, setJoin] = useState(false)
+
+  if (join == true){
+    setJoin(false)
+    console.log(userId);
+  }
 
 
   useEffect(() => {
@@ -48,6 +56,7 @@ function Map() {
           onClick={() => {
             
             setEvent(event);
+            setEventId(event.id);
           }}
           icon={{
             url:'/pin.svg',
@@ -84,7 +93,7 @@ function EventsItemMap() {
     return (
         <div style={{ width: "100%", height: "100%" }}>
             <MapWrapped
-                googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDL7dF5PYDKh9_qXCj1nER4iilcph9heM8`}
+                googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places`}
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={<div style={{ height: `100%` }} />}
                 mapElement={<div style={{ height: `100%` }} />}

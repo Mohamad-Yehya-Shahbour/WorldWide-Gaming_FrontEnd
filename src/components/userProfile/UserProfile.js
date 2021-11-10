@@ -81,7 +81,7 @@ function UserProfile(props) {
     <div>
       <Toolbar>
         <Typography  variant="h6" noWrap component="div">
-           <b> World Wide Gaming </b>
+           <b> WorldWide Gaming </b>
         </Typography>
       </Toolbar>
       <Divider />

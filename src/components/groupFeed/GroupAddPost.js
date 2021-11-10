@@ -31,10 +31,10 @@ function GroupAddPost(props) {
     return (
         <div>
            
-                <Container style={{minWidth: "80%",backgroundColor:"white", boxShadow:"initial" }} className=" rounded p-3 shadow-box-example z-depth-1">
-                    <Row>
+                <Container  style={{minWidth: "80%",backgroundColor:"white", boxShadow:"initial" }} className=" rounded p-3 shadow-box-example z-depth-1">
+                    <Row >
                         <Col sm={10} className="d-flex align-items-center justify-content-center">
-                        <input onInput={(e)=>{e.preventDefault();setValue(e.target.value)}} id="group-input" style ={{width:"100%"}}type="text" className="form-control" placeholder="Write your thoughts here.." aria-label="" />
+                        <input  onInput={(e)=>{e.preventDefault();setValue(e.target.value)}} id="group-input" style ={{width:"100%"}}type="text" className="form-control" placeholder="Write your thoughts here.." aria-label="" />
                         </Col>
                         <Col sm={1} className="d-flex align-items-center justify-content-center">
                         <Button onClick={(e)=>{handle(e)}} size="small" className=""><ChatOutlined id="add-group-post" /></Button>
